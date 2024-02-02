@@ -47,7 +47,9 @@ class CustomTile extends StatelessWidget {
               alignment: const Alignment(0, -3),
               child: SizedBox(
                 height: height * 0.2,
-                child: Image.asset(fit: BoxFit.cover, image),
+                child: Hero(
+                    tag: "hero-$title",
+                    child: Image.asset(fit: BoxFit.cover, image)),
               ),
             ),
             Align(

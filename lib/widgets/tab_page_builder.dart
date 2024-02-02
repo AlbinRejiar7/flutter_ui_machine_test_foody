@@ -46,7 +46,9 @@ class TabPages extends StatelessWidget {
                       flexibleSpace: customAppBar(width, scaffoldKey, height),
                     )
                   : const SizedBox(),
-              SizedBox(height: height * 0.39, child: Image.asset(image)),
+              SizedBox(
+                  height: height * 0.39,
+                  child: Hero(tag: "hero-$title", child: Image.asset(image))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

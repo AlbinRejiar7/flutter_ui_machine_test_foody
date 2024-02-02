@@ -36,12 +36,8 @@ class AllPage extends StatelessWidget {
         itemCount: title.length,
         itemBuilder: (BuildContext context, int index) {
           return CustomTile(
-              onTap: () => Get.to(
-                  transition: Transition.leftToRight,
-                  () => TabPages(
-                      isTapped: true,
-                      title: title[index],
-                      image: image[index])),
+              onTap: () => Get.to(() => TabPages(
+                  isTapped: true, title: title[index], image: image[index])),
               title: title[index],
               image: image[index]);
         },
